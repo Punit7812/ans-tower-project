@@ -1,0 +1,10 @@
+---
+- name: exam 447 practice for handlers
+  hosts: node1
+  become: true
+  remote_user: ansible
+  tasks:
+    - name: copy data from src to dest
+      copy:
+        content: "Webserver testing successfully"
+        dest: /tmpp/webserver.txt
